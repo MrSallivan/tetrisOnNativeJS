@@ -7,10 +7,10 @@ const app = (difficulty) => {
   gameContent.innerHTML = ""
   gameContent.innerHTML = tetrisContent
 
-  const convas = document.getElementById("game")
-  const context = canvas.gameContent("2d")
+  const canvas = document.getElementById("game")
+  const context = canvas.getContext("2d")
   const startBtn = document.querySelector(".begin")
-  const pausetBtn = document.querySelector(".pause")
+  const pauseBtn = document.querySelector(".pause")
   const restartBtn = document.querySelector(".restart")
   const scoreBlock = document.querySelector(".score__total")
   const topArrow = document.querySelector(".top")
@@ -20,6 +20,14 @@ const app = (difficulty) => {
   const squareSize = 32
   let tetrominoOrder = []
   let playArea = []
+
+  for (let row = -2; row < 20; row++){
+    playArea[row] = []
+    for (let col = 0; col < 10; col++){
+      playArea[row][col] = 0
+    }
+  }
+console.log(playArea)
 
   addHoverForButtons()
 }
