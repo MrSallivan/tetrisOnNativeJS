@@ -31,7 +31,7 @@ export const tetrisContent = `
                 <span class="score__total">0</span>
             </div>
             <div class="game-buttons">
-                <button class="sketch-button start">START</button>
+                <button class="sketch-button begin">START</button>
                 <button class="sketch-button pause">PAUSE</button>
                 <button class="sketch-button restart">RESTART</button>
             </div>
